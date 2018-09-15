@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="style.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+
+	<nav>
+		<img src="img.png" class="image-nav" alt="logo">
+		<ul>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i></a>
+				<li>
+					<a href="#" class="nav-main-options" onclick="getSubmenu()">Online mediaplanung <i class="fa fa-angle-down"></i></a>
+					<ul id="subMenu">
+						<li><a href="#">Adwords-Werbung</a></li>
+						<li><p></p></li>
+						<li><a href="#">SEO- Analysen</a></li>
+						<li><p></p></li>
+						<li><a href="#">Social media-werbung</a></li>
+						<li><p></p></li>
+						<li><a href="#">Display-werbung</a></li>
+						<li><p></p></li>
+						<li><a href="#">Video-werbung</a></li>
+						<li><p></p></li>
+						<li><a href="#">Web Analytics und reporting</a></li>
+
+					</ul>
+				</li>
+
+				<li>
+					<a href="#" class="nav-main-options">Digital</a>
+
+				</li>
+
+
+			</ul>
+		</nav>
+
+		<div class="container">
+			<h1 >HELLO World!!</h1>
+			<p>nice to know you</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var fold=0;
+		var show=0;
+		var sec= document.getElementById("subMenu");
+		var x = document.getElementsByClassName("nav-main-options");
+		window.onresize = function(){ location.reload(); }
+		function myFunction() {
+			
+			if(fold==0)
+			{
+				var i;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "block";
+				}
+				fold=1;
+			}
+			else{
+				var i;
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+					sec.style.display="none";
+				}
+				fold=0;
+			}
+
+		}
+		function getSubmenu()
+		{
+			
+			if(show==0)
+			{
+				sec.style.display="block";
+				show=1;
+			}
+			else
+			{
+				sec.style.display="none";
+				show=0;
+			}
+		}
+	</script>
+	</html>

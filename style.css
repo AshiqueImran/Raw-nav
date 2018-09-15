@@ -1,0 +1,126 @@
+html {
+	text-align: center;
+}
+body{
+	background-color: #FCFCFC;
+	font-family: 'Lato', sans-serif;
+}
+nav {
+	width: 100%;
+	height: auto;
+	background-color: #FAF9F9;
+	font-weight: bolder;
+}
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-right: 10%;
+	float: right;
+}
+
+nav a {
+	color: #2E2E2E;
+	text-decoration: none;
+}
+nav > ul > li {
+	display: inline-block;
+	position: relative;
+	margin: 1em
+}
+nav > ul > li > ul > li {
+	white-space: nowrap;
+}
+nav > ul > li > ul > li > a {
+	display: block;
+	text-transform: uppercase;
+}
+nav > ul > li > ul > li > a:hover {
+	font-weight: bold;
+	color: #F4793B;
+}
+
+nav > ul > li > ul > li > p{
+	display: block;
+	width: 90px;
+	height: 1px;
+	background-color: #E4E4E4;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media screen and (min-width: 769px){
+	.image-nav{
+		width: 20%;
+		height: auto;
+		float: left;
+		margin-left: 5%;
+	}
+	.icon{
+		display: none;
+	}
+	nav > ul > li:hover > ul {
+		display:block;
+	}
+	nav > ul > li > ul:after {
+		position: absolute;
+		left: 50%;
+		margin-left: -20px;
+		top: -8px;
+		width: 0;
+		height: 0;
+		content:'';
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-bottom: 20px solid #FFFFFF;
+	}
+	nav > ul > li > ul {
+		display: none;
+		position: absolute;
+		background-color: #FFFFFF;
+		left: -100px;
+		top: 50px;
+		padding:30%;
+		box-shadow: 0 0 15px #E0E2DF;
+		z-index: 100;
+	}
+	.container{
+		margin-top: 60px;
+		position: absolute;
+		z-index: -1;
+	}
+	nav > ul > li > a {
+		padding-bottom: 50px;
+		text-transform: uppercase;
+	}
+}
+@media screen and (max-width: 768px){
+	.image-nav{
+		display: none;
+	}
+	.icon{
+		float: right;
+		font-size: large;
+	}
+	.nav-main-options{
+		display: none;
+	}
+	nav > ul > li > ul {
+		display: none;
+		position: absolute;
+		background-color: #FFFFFF;
+		left: -40px;
+		top: 50px;
+		padding:15%;
+		box-shadow: 0 0 15px #E0E2DF;
+		z-index: 100;
+	}
+	.container{
+		margin-top: 100px;
+		position: absolute;
+		z-index: -1;
+	}
+	nav > ul > li > a {
+		padding-bottom: 10px;
+		text-transform: uppercase;
+	}
+}
